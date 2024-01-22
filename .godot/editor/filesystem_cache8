@@ -1,0 +1,15 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1705895241
+Crosshair.gd::GDScript::-1::1705895191::0::1::::<>Control<>::
+icon.svg::CompressedTexture2D::4464422258569356549::1705895191::1705895241::1::::<><>::
+Player.gd::GDScript::-1::1705895191::0::1::::<>CharacterBody3D<>::
+Player.tscn::PackedScene::1634698552428449830::1705895191::0::1::::<><>::res://Player.gd<>uid://c7c3vxrqwvss7::::res://Wand.tscn<>res://Crosshair.gd
+README.md::TextFile::-1::1705895191::0::1::::<><>::
+Sandbox.tscn::PackedScene::501881305413164033::1705895191::0::1::::<><>::uid://xj4im0umqm43::::res://Player.tscn<>uid://dxyg365ffw3cb::::res://Materials/StoneMaterial.tres
+Wand.tscn::PackedScene::7024751931836763156::1705895191::0::1::::<><>::uid://b10ac1ghd1u48::::res://Materials/WandMaterial.tres
+::res://Fonts/::1705895191
+MedievalSharp-Regular.ttf::FontFile::7531980277477858795::1705895191::1705895241::1::::<><>::
+::res://Materials/::1705895191
+StartMenu.tscn::PackedScene::1524880198650574757::1705895191::0::1::::<><>::uid://dfksu5vreti5x::::res://Fonts/MedievalSharp-Regular.ttf
+StoneMaterial.tres::StandardMaterial3D::8823566499840161365::1705895191::0::1::::<><>::
+WandMaterial.tres::StandardMaterial3D::4262945008920280491::1705895191::0::1::::<><>::
