@@ -1,0 +1,48 @@
+[gd_scene load_steps=7 format=3 uid="uid://xj4im0umqm43"]
+
+[ext_resource type="Script" path="res://Player.gd" id="1_dgsno"]
+[ext_resource type="PackedScene" uid="uid://c7c3vxrqwvss7" path="res://Wand.tscn" id="2_pxt4d"]
+[ext_resource type="Script" path="res://Crosshair.gd" id="2_yypid"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_nppyd"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_46n6l"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_asw78"]
+size = Vector3(0.5, 0.2, 0.5)
+
+[node name="Player" type="CharacterBody3D"]
+script = ExtResource("1_dgsno")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+mesh = SubResource("CapsuleMesh_nppyd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CapsuleShape3D_46n6l")
+
+[node name="CameraPivot" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+
+[node name="Camera3D" type="Camera3D" parent="CameraPivot"]
+
+[node name="Wand" parent="CameraPivot/Camera3D" instance=ExtResource("2_pxt4d")]
+transform = Transform3D(0.141189, -0.0805664, -0.986698, 0.28123, 0.958885, -0.0380535, 0.949197, -0.272117, 0.158042, 0.616228, -0.349324, -0.683918)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CameraPivot/Camera3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.4)
+mesh = SubResource("BoxMesh_asw78")
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Crosshair" type="Control" parent="CenterContainer"]
+layout_mode = 2
+script = ExtResource("2_yypid")
+
+[node name="SubViewport" type="SubViewport" parent="."]
