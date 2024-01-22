@@ -1,3 +1,5 @@
+RigidBody3D
+RigidBody2D
 MeshInstance3D
 Area3D
 CollisionShape3D

@@ -75,15 +75,17 @@ func handle_camera_rotation() ->void:
 	mouse_motion = Vector2.ZERO
 
 func place_ice() -> void:
+	var normal = raycast.get_collision_normal()
+	if normal.y <= 0:
+		return
 	
 	var point = raycast.get_collision_point()
 	var local_point = to_local(point)
-	var normal = raycast.get_collision_normal()
 	var up = Vector3.RIGHT if normal == Vector3.UP else Vector3.UP
 	
-	var line_start = camera.unproject_position(point)
-	var line_end = camera.unproject_position(point + normal)
-	
+	## Normal line for debugging
+	#var line_start = camera.unproject_position(point)
+	#var line_end = camera.unproject_position(point + normal)
 	#crosshair.set_norm_line([line_start, line_end])
 	
 	var new_iceblock = iceblock_scene.instantiate()

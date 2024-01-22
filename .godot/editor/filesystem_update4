@@ -1,4 +1,4 @@
-res://Player.tscn
-res://Player.gd
-res://IceBlock.tscn
 res://Sandbox.tscn
+res://Player.tscn
+res://IceBlock.tscn
+res://Wand.tscn
